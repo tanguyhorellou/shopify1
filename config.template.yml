@@ -1,0 +1,6 @@
+development:
+  password: 
+  theme_id: "79526133848"
+  store: https://horellou-tanguy.myshopify.com
+  ignore_files: 
+    - config/settings_data.json
