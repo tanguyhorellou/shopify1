@@ -1,0 +1,78 @@
+<hr>
+<div id="section-cta">
+  <div class="container">
+    <h3> {{ section.settings.text-box }} </h3>
+    <a href="{{ section.settings.link }}"><button class="button" style="background-color:{{ section.settings.color }}; width:{{ section.settings.tailleBouton }}px;">{{ section.settings.linktext }}</button></a>
+  </div>
+</div>
+<hr>
+
+<style>
+.container{
+    text-align: center;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Button",
+ "settings": [
+    {
+      "id": "text-box",
+      "type": "text",
+      "label": "Titre",
+      "default": "Titre"
+    },
+    {
+      "id": "link",
+      "type": "url",
+      "label": "Lien"
+    },
+    {
+      "id": "linktext",
+      "type": "text",
+      "label": "Texte du bouton",
+      "default": "Clique ici"
+    },
+    {
+      "id": "color",
+      "type": "color",
+      "label": "Couleur",
+      "default": "#5c6ac4"
+    },
+    {
+      "id": "tailleBouton",
+      "type": "range",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Taille",
+      "default": 150
+    }
+ ],
+  "presets": [
+    {
+      "name": "Button",
+      "category": "Button"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
